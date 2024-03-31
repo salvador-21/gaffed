@@ -1,0 +1,23 @@
+
+{% load static %}
+<div id="left-sidebar" class="sidebar">
+    <div class="navbar-brand text-center">
+    <a href="{% url 'homepage'%}"><img src="{% static 'ugs_app/assets/logo.png'%}" style="width: 100px; height: 100px; margin-bottom: -30px;" alt="Oculux Logo" class="img-fluid logo"></a>
+    <button type="button" class="btn-toggle-offcanvas btn btn-sm float-right"><i class="lnr lnr-menu fa fa-chevron-circle-left"></i></button>
+    </div>
+    <div class="sidebar-scroll">
+    <nav id="left-sidebar-nav" class="sidebar-nav">
+    <ul id="main-menu" class="metismenu">
+    <li class="header">{{ user.useraccount.usertype}}</li>
+    <li class="{% if page == 'Dashboard'%}active{%endif%}"><a href="{% url 'homepage'%}"><i class="icon-home"></i><span>Dashboard</span></a></li>
+    <li class="{% if page == 'User Account'%}active{%endif%}"><a href="{% url 'user_account'%}"><i class="icon-users"></i><span>User Account's</span></a></li>
+    <li class>
+    <a href="#Pages" class="has-arrow"><i class="icon-game-controller"></i><span>Online Games's</span></a>
+    <ul>
+    <li class><a href="#">Sabong Express</a></li>
+    </ul>
+    </li>
+    </ul>
+    </nav>
+    </div>
+    </div>

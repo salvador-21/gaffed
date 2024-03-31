@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="icon" href="#" type="image/x-icon"> 
+<title>My Dashboard - Laravel</title>
+<meta name="description" content="Laravel">
+<meta name="author" content="Laravel">
+<link rel="stylesheet" href="{% static 'ugs_app/assets/bootstrap.min.css'%}">
+<link rel="stylesheet" href="{% static 'ugs_app/assets/font-awesome.min.css'%}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="https://cdn.js'%}delivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css'%}" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous"> -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'%}" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+<link rel="stylesheet" href="{% static 'ugs_app/assets/vendor/animate-css/vivify.min.css'%}">
+<link rel="stylesheet" href="{% static 'ugs_app/assets/vendor/c3/c3.min.css'%}">
+<link rel="stylesheet" href="{% static 'ugs_app/assets/css/site.min.css'%}">
+
+
+</head>
+<body class="theme-orange font-montserrat">
+
+<div class="page-loader-wrapper">
+<div class="loader">
+<div class="bar1"></div>
+<div class="bar2"></div>
+<div class="bar3"></div>
+<div class="bar4"></div>
+<div class="bar5"></div>
+</div>
+</div>
+<div class="themesetting">
+<a href="javascript:void(0);" class="theme_btn"><i class="icon-magic-wand"></i></a>
+<div class="card theme_color">
+<div class="header">
+<h2>Theme Color</h2>
+</div>
+<ul class="choose-skin list-unstyled mb-0">
+<li data-theme="green"><div class="green"></div></li>
+<li data-theme="orange"><div class="orange"></div></li>
+<li data-theme="blush" class="active"><div class="blush"></div></li>
+<li data-theme="cyan"><div class="cyan"></div></li>
+<li data-theme="indigo"><div class="indigo"></div></li>
+<li data-theme="red"><div class="red"></div></li>
+</ul>
+</div>
+<div class="card font_setting">
+<div class="header">
+<h2>Font Settings</h2>
+</div>
+<div>
+<div class="fancy-radio mb-2">
+<label><input name="font" value="font-krub" type="radio"><span><i></i>Krub Google font</span></label>
+</div>
+<div class="fancy-radio mb-2">
+<label><input name="font" value="font-montserrat" type="radio" checked><span><i></i>Montserrat Google font</span></label>
+</div>
+<div class="fancy-radio">
+<label><input name="font" value="font-roboto" type="radio"><span><i></i>Robot Google font</span></label>
+</div>
+</div>
+</div>
+<div class="card setting_switch">
+<div class="header">
+<h2>Settings</h2>
+</div>
+<ul class="list-group">
+<li class="list-group-item">
+Light Version
+<div class="float-right">
+<label class="switch">
+<input type="checkbox" class="lv-btn">
+<span class="slider round"></span>
+</label>
+</div>
+</li>
+<li class="list-group-item">
+RTL Version
+<div class="float-right">
+<label class="switch">
+<input type="checkbox" class="rtl-btn">
+<span class="slider round"></span>
+</label>
+</div>
+</li>
+<li class="list-group-item">
+Horizontal Henu
+<div class="float-right">
+<label class="switch">
+<input type="checkbox" class="hmenu-btn">
+<span class="slider round"></span>
+</label>
+</div>
+</li>
+<li class="list-group-item">
+Mini Sidebar
+<div class="float-right">
+<label class="switch">
+<input type="checkbox" class="mini-sidebar-btn">
+<span class="slider round"></span>
+</label>
+</div>
+</li>
+</ul>
+</div>
+<div class="card">
+<div class="form-group">
+<label class="d-block">Traffic this Month <span class="float-right">77%</span></label>
+<div class="progress progress-xxs">
+<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%;"></div>
+</div>
+</div>
+<div class="form-group">
+<label class="d-block">Server Load <span class="float-right">50%</span></label>
+<div class="progress progress-xxs">
+<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="overlay"></div>
+<div id="wrapper">
+<nav class="navbar top-navbar">
+<div class="container-fluid">
+<div class="navbar-left">
+<div class="navbar-btn">
+<a href="index-2.html"><img src="https://oculux.nsdbytes.com/laravel/public/assets/images/icon.svg" alt="Oculux Logo" class="img-fluid logo"></a>
+<button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+</div>
+<ul class="nav navbar-nav">
+<li class="dropdown">
+<a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+<i class="icon-envelope"></i>
+<span class="notification-dot bg-green">4</span>
+</a>
+<ul class="dropdown-menu right_chat email vivify swoopInTop">
+<li class="header green">You have 4 New eMail</li>
+<li>
+<a href="javascript:void(0);">
+<div class="media">
+<div class="avtar-pic w35 bg-red"><span>FC</span></div>
+<div class="media-body">
+<span class="name">James Wert <small class="float-right text-muted">Just now</small></span>
+<span class="message">Update GitHub</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="javascript:void(0);">
+<div class="media">
+<div class="avtar-pic w35 bg-indigo"><span>FC</span></div>
+<div class="media-body">
+<span class="name">Folisise Chosielie <small class="float-right text-muted">12min ago</small></span>
+<span class="message">New Messages</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="javascript:void(0);">
+<div class="media">
+<img class="media-object " src="{% static 'ugs_app/assets/images/xs/avatar5.jpg" alt>
+<div class="media-body">
+<span class="name">Louis Henry <small class="float-right text-muted">38min ago</small></span>
+<span class="message">Design bug fix</span>
+</div>
+</div>
+</a>
+</li>
+<li>
+<a href="javascript:void(0);">
+<div class="media mb-0">
+<img class="media-object " src="{% static 'ugs_app/assets/images/xs/avatar2.jpg" alt>
+<div class="media-body">
+<span class="name">Debra Stewart <small class="float-right text-muted">2hr ago</small></span>
+<span class="message">Fix Bug</span>
+</div>
+</div>
+</a>
+</li>
+</ul>
+</li>
+<li class="dropdown">
+<a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+<i class="icon-bell"></i>
+<span class="notification-dot bg-azura">4</span>
+</a>
+<ul class="dropdown-menu feeds_widget vivify swoopInTop">
+<li class="header blue">You have 4 New Notifications</li>
+<li>
+<a href="javascript:void(0);">
+<div class="feeds-left bg-red"><i class="fa fa-check"></i></div>
+<div class="feeds-body">
+<h4 class="title text-danger">Issue Fixed <small class="float-right text-muted">9:10 AM</small></h4>
+<small>WE have fix all Design bug with Responsive It is a long established fact that a reader</small>
+</div>
+</a>
+</li>
+<li>
+<a href="javascript:void(0);">
+<div class="feeds-left bg-info"><i class="fa fa-user"></i></div>
+<div class="feeds-body">
+<h4 class="title text-info">New User <small class="float-right text-muted">9:15 AM</small></h4>
+<small>I feel great! Thanks team here are many variations of passages of Lorem</small>
+</div>
+</a>
+</li>
+<li>
+<a href="javascript:void(0);">
+<div class="feeds-left bg-orange"><i class="fa fa-question-circle"></i></div>
+<div class="feeds-body">
+<h4 class="title text-warning">Server Warning <small class="float-right text-muted">9:17 AM</small></h4>
+<small>Your connection is not private Contrary to popular belief</small>
+</div>
+</a>
+</li>
+<li>
+<a href="javascript:void(0);">
+<div class="feeds-left bg-green"><i class="fa fa-thumbs-o-up"></i></div>
+<div class="feeds-body">
+<h4 class="title text-success">2 New Feedback <small class="float-right text-muted">9:22 AM</small></h4>
+<small>It will give a smart finishing to your site</small>
+</div>
+</a>
+</li>
+</ul>
+</li>
+<li class="dropdown language-menu">
+<a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+<i class="fa fa-language"></i>
+</a>
+<div class="dropdown-menu vivify swoopInTop" aria-labelledby="navbarDropdown">
+<a class="dropdown-item pt-2 pb-2" href="#"><img src="https://oculux.nsdbytes.com/laravel/public/assets/images/flag/us.svg" class="w20 mr-2 rounded-circle"> US English</a>
+<a class="dropdown-item pt-2 pb-2" href="#"><img src="https://oculux.nsdbytes.com/laravel/public/assets/images/flag/gb.svg" class="w20 mr-2 rounded-circle"> UK English</a>
+<div class="dropdown-divider"></div>
+<a class="dropdown-item pt-2 pb-2" href="#"><img src="https://oculux.nsdbytes.com/laravel/public/assets/images/flag/russia.svg" class="w20 mr-2 rounded-circle"> Russian</a>
+<a class="dropdown-item pt-2 pb-2" href="#"><img src="https://oculux.nsdbytes.com/laravel/public/assets/images/flag/arabia.svg" class="w20 mr-2 rounded-circle"> Arabic</a>
+<a class="dropdown-item pt-2 pb-2" href="#"><img src="https://oculux.nsdbytes.com/laravel/public/assets/images/flag/france.svg" class="w20 mr-2 rounded-circle"> French</a>
+</div>
+</li>
+<li><a href="javascript:void(0);" class="megamenu_toggle icon-menu" title="Mega Menu">Mega</a></li>
+<li class="p_social"><a href="https://oculux.nsdbytes.com/laravel/public/extra/social" class="social icon-menu" title="News">Social</a></li>
+<li class="p_news"><a href="https://oculux.nsdbytes.com/laravel/public/extra/news" class="news icon-menu" title="News">News</a></li>
+</ul>
+</div>
+<div class="navbar-right">
+<div id="navbar-menu">
+<ul class="nav navbar-nav">
+<li><a href="javascript:void(0);" class="search_toggle icon-menu" title="Search Result"><i class="icon-magnifier"></i></a></li>
+<li><a href="javascript:void(0);" class="right_toggle icon-menu" title="Right Menu"><i class="icon-bubbles"></i><span class="notification-dot bg-pink">2</span></a></li>
+<li><a href="https://oculux.nsdbytes.com/laravel/public/authentication/login" class="icon-menu"><i class="icon-power"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
+</nav> <div id="megamenu" class="megamenu particles_jsa">
+<a href="javascript:void(0);" class="megamenu_toggle btn btn-danger"><i class="icon-close"></i></a>
+<div class="container">
+<div class="row clearfix">
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body ribbon">
+<div class="ribbon-box green">15</div>
+<a href="https://oculux.nsdbytes.com/laravel/public/email/inbox" class="my_sort_cut text-muted">
+<i class="icon-envelope"></i>
+<span>Inbox</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body">
+<a href="https://oculux.nsdbytes.com/laravel/public/pages/profile" class="my_sort_cut text-muted">
+<i class="icon-user"></i>
+<span>Profile</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body ribbon">
+<div class="ribbon-box orange">8</div>
+<a href="https://oculux.nsdbytes.com/laravel/public/extra/settings" class="my_sort_cut text-muted">
+<i class="icon-settings"></i>
+<span>Settings</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body">
+<a href="https://oculux.nsdbytes.com/laravel/public/dashboard/index3" class="my_sort_cut text-muted">
+<i class="icon-diamond"></i>
+<span>My Crypto</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body">
+<a href="https://oculux.nsdbytes.com/laravel/public/app/calendar" class="my_sort_cut text-muted">
+<i class="icon-calendar"></i>
+<span>Calendar</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body ribbon">
+<div class="ribbon-box indigo">10</div>
+<a href="https://oculux.nsdbytes.com/laravel/public/pages/invoices" class="my_sort_cut text-muted">
+<i class="icon-doc"></i>
+<span>Invoices</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row clearfix">
+<div class="col-md-4 col-sm-12">
+<div class="card w_card3">
+<div class="body">
+<div class="text-center"><i class="icon-picture text-info"></i>
+<h4 class="m-t-25 mb-0">104 Picture</h4>
+<p>Your gallery download complete</p>
+<a href="javascript:void(0);" class="btn btn-info btn-round">Download now</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-12">
+<div class="card w_card3">
+<div class="body">
+<div class="text-center"><i class="icon-diamond text-success"></i>
+<h4 class="m-t-25 mb-0">813 Point</h4>
+<p>You are doing great job!</p>
+<a href="javascript:void(0);" class="btn btn-success btn-round">Read now</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-12">
+<div class="card w_card3">
+<div class="body">
+<div class="text-center"><i class="icon-social-twitter text-primary"></i>
+<h4 class="m-t-25 mb-0">3,756</h4>
+<p>New Followers on Twitter</p>
+<a href="javascript:void(0);" class="btn btn-primary btn-round">Find more</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<ul class="list-group">
+<li class="list-group-item">
+Anyone send me a message
+<div class="float-right">
+<label class="switch">
+<input type="checkbox" checked>
+<span class="slider round"></span>
+</label>
+</div>
+</li>
+<li class="list-group-item">
+Anyone seeing my profile page
+<div class="float-right">
+<label class="switch">
+<input type="checkbox" checked>
+<span class="slider round"></span>
+</label>
+</div>
+</li>
+<li class="list-group-item">
+Anyone posts a comment on my post
+<div class="float-right">
+<label class="switch">
+<input type="checkbox">
+<span class="slider round"></span>
+</label>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="particles-js"></div>
+</div> <div class="search_div">
+<div class="card">
+<div class="body">
+<form id="navbar-search" class="navbar-form search-form">
+<div class="input-group mb-0">
+<input type="text" class="form-control" placeholder="Search...">
+<div class="input-group-append">
+<span class="input-group-text"><i class="icon-magnifier"></i></span>
+<a href="javascript:void(0);" class="search_toggle btn btn-danger"><i class="icon-close"></i></a>
+</div>
+</div>
+</form>
+</div>
+</div>
+<span>Search Result <small class="float-right text-muted">About 90 results (0.47 seconds)</small></span>
+<div class="table-responsive">
+<table class="table table-hover table-custom spacing5">
+<tbody>
+<tr>
+<td class="w40">
+<span>01</span>
+</td>
+<td>
+<div class="d-flex align-items-center">
+<div class="avtar-pic w35 bg-red" data-toggle="tooltip" data-placement="top" title data-original-title="Avatar Name"><span>SS</span></div>
+<div class="ml-3">
+<a href="page-invoices-detail.html" title>South Shyanne</a>
+<p class="mb-0"><a href="https://oculux.nsdbytes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="becdd1cbcad690cdd6c7dfd0d0dbfedbc6dfd3ced2db90ddd1d3">[email&#160;protected]</a></p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<span>02</span>
+</td>
+<td>
+<div class="d-flex align-items-center">
+<img src="{% static 'ugs_app/assets/images/xs/avatar2.jpg" data-toggle="tooltip" data-placement="top" title alt="Avatar" class="w35 h35 rounded" data-original-title="Avatar Name">
+<div class="ml-3">
+<a href="javascript:void(0);" title>Zoe Baker</a>
+<p class="mb-0"><a href="https://oculux.nsdbytes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1d677278337f7c76786f5d78657c706d7178337e7270">[email&#160;protected]</a></p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<span>03</span>
+</td>
+<td>
+<div class="d-flex align-items-center">
+<div class="avtar-pic w35 bg-indigo" data-toggle="tooltip" data-placement="top" title data-original-title="Avatar Name"><span>CB</span></div>
+<div class="ml-3">
+<a href="javascript:void(0);" title>Colin Brown</a>
+<p class="mb-0"><a href="https://oculux.nsdbytes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="65060a090c0b07170a120b25001d04081509004b060a08">[email&#160;protected]</a></p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<span>04</span>
+</td>
+<td>
+<div class="d-flex align-items-center">
+<div class="avtar-pic w35 bg-green" data-toggle="tooltip" data-placement="top" title data-original-title="Avatar Name"><span>KG</span></div>
+<div class="ml-3">
+<a href="javascript:void(0);" title>Kevin Gill</a>
+<p class="mb-0"><a href="https://oculux.nsdbytes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d7bcb2a1beb9f9b0bebbbb97b2afb6baa7bbb2f9b4b8ba">[email&#160;protected]</a></p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<span>05</span>
+</td>
+<td>
+<div class="d-flex align-items-center">
+<img src="{% static 'ugs_app/assets/images/xs/avatar5.jpg" data-toggle="tooltip" data-placement="top" title alt="Avatar" class="w35 h35 rounded" data-original-title="Avatar Name">
+<div class="ml-3">
+<a href="javascript:void(0);" title>Brandon Smith</a>
+<p class="mb-0"><a href="https://oculux.nsdbytes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="84c9e5f6ede5aae3ede8e8c4e1fce5e9f4e8e1aae7ebe9">[email&#160;protected]</a></p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<span>06</span>
+</td>
+<td>
+<div class="d-flex align-items-center">
+<img src="{% static 'ugs_app/assets/images/xs/avatar6.jpg" data-toggle="tooltip" data-placement="top" title alt="Avatar" class="w35 h35 rounded" data-original-title="Avatar Name">
+<div class="ml-3">
+<a href="javascript:void(0);" title>Kevin Baker</a>
+<p class="mb-0"><a href="https://oculux.nsdbytes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="452e20332c2b6b27242e203705203d24283529206b262a28">[email&#160;protected]</a></p>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<span>07</span>
+</td>
+<td>
+<div class="d-flex align-items-center">
+<img src="{% static 'ugs_app/assets/images/xs/avatar2.jpg" data-toggle="tooltip" data-placement="top" title alt="Avatar" class="w35 h35 rounded" data-original-title="Avatar Name">
+<div class="ml-3">
+<a href="javascript:void(0);" title>Zoe Baker</a>
+<p class="mb-0"><a href="https://oculux.nsdbytes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1a60757f34787b717f685a7f627b776a767f34797577">[email&#160;protected]</a></p>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div> <div id="rightbar" class="rightbar">
+<div class="body">
+<ul class="nav nav-tabs2">
+<li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#Chat-one">Chat</a></li>
+<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Chat-list">List</a></li>
+<li class="nav-item"><a class="nav-link" data-toggle="tab" href="#Chat-groups">Groups</a></li>
+</ul>
+<hr>
+<div class="tab-content">
+<div class="tab-pane vivify fadeIn delay-100 active" id="Chat-one">
+<div class="chat_detail">
+<ul class="chat-widget clearfix">
+<li class="left float-left">
+<div class="avtar-pic w35 bg-pink"><span>KG</span></div>
+<div class="chat-info">
+<span class="message">Hello, John<br>What is the update on Project X?</span>
+</div>
+</li>
+<li class="right">
+<img src="{% static 'ugs_app/assets/images/xs/avatar1.jpg" class="rounded" alt>
+<div class="chat-info">
+<span class="message">Hi, Alizee<br> It is almost completed. I will send you an email later today.</span>
+</div>
+</li>
+<li class="left float-left">
+<div class="avtar-pic w35 bg-pink"><span>KG</span></div>
+<div class="chat-info">
+<span class="message">That's great. Will catch you in evening.</span>
+</div>
+</li>
+<li class="right">
+<img src="{% static 'ugs_app/assets/images/xs/avatar1.jpg" class="rounded" alt>
+<div class="chat-info">
+<span class="message">Sure we'will have a blast today.</span>
+</div>
+</li>
+</ul>
+<div class="input-group mb-0">
+<div class="input-group-prepend">
+<span class="input-group-text">
+<a href="javascript:void(0);" class><i class="icon-camera text-warning"></i></a>
+</span>
+</div>
+<textarea type="text" row class="form-control" placeholder="Enter text here..."></textarea>
+</div>
+</div>
+</div>
+<div class="tab-pane vvivify fadeIn delay-100" id="Chat-list">
+<ul class="right_chat list-unstyled mb-0">
+<li class="offline">
+<a href="javascript:void(0);">
+<div class="media">
+<div class="avtar-pic w35 bg-red"><span>FC</span></div>
+<div class="media-body">
+<span class="name">Folisise Chosielie</span>
+<span class="message">offline</span>
+<span class="badge badge-outline status"></span>
+</div>
+</div>
+</a>
+</li>
+<li class="online">
+<a href="javascript:void(0);">
+<div class="media">
+<img class="media-object " src="{% static 'ugs_app/assets/images/xs/avatar3.jpg" alt>
+<div class="media-body">
+<span class="name">Marshall Nichols</span>
+<span class="message">online</span>
+<span class="badge badge-outline status"></span>
+</div>
+</div>
+</a>
+</li>
+<li class="online">
+<a href="javascript:void(0);">
+<div class="media">
+<div class="avtar-pic w35 bg-red"><span>FC</span></div>
+<div class="media-body">
+<span class="name">Louis Henry</span>
+<span class="message">online</span>
+<span class="badge badge-outline status"></span>
+</div>
+</div>
+</a>
+</li>
+<li class="online">
+<a href="javascript:void(0);">
+<div class="media">
+<div class="avtar-pic w35 bg-orange"><span>DS</span></div>
+<div class="media-body">
+<span class="name">Debra Stewart</span>
+<span class="message">online</span>
+<span class="badge badge-outline status"></span>
+</div>
+</div>
+</a>
+</li>
+<li class="offline">
+<a href="javascript:void(0);">
+<div class="media">
+<div class="avtar-pic w35 bg-green"><span>SW</span></div>
+<div class="media-body">
+<span class="name">Lisa Garett</span>
+<span class="message">offline since May 12</span>
+<span class="badge badge-outline status"></span>
+</div>
+</div>
+</a>
+</li>
+<li class="online">
+<a href="javascript:void(0);">
+<div class="media">
+<img class="media-object " src="{% static 'ugs_app/assets/images/xs/avatar5.jpg" alt>
+<div class="media-body">
+<span class="name">Debra Stewart</span>
+<span class="message">online</span>
+<span class="badge badge-outline status"></span>
+</div>
+</div>
+</a>
+</li>
+<li class="offline">
+<a href="javascript:void(0);">
+<div class="media">
+<img class="media-object " src="{% static 'ugs_app/assets/images/xs/avatar2.jpg" alt>
+<div class="media-body">
+<span class="name">Lisa Garett</span>
+<span class="message">offline since Jan 18</span>
+<span class="badge badge-outline status"></span>
+</div>
+</div>
+</a>
+</li>
+<li class="online">
+<a href="javascript:void(0);">
+<div class="media">
+<div class="avtar-pic w35 bg-indigo"><span>FC</span></div>
+<div class="media-body">
+<span class="name">Louis Henry</span>
+<span class="message">online</span>
+<span class="badge badge-outline status"></span>
+</div>
+</div>
+</a>
+</li>
+<li class="online">
+<a href="javascript:void(0);">
+<div class="media">
+<div class="avtar-pic w35 bg-pink"><span>DS</span></div>
+<div class="media-body">
+<span class="name">Debra Stewart</span>
+<span class="message">online</span>
+<span class="badge badge-outline status"></span>
+</div>
+</div>
+</a>
+</li>
+<li class="offline">
+<a href="javascript:void(0);">
+<div class="media">
+<div class="avtar-pic w35 bg-info"><span>SW</span></div>
+<div class="media-body">
+<span class="name">Lisa Garett</span>
+<span class="message">offline since May 12</span>
+<span class="badge badge-outline status"></span>
+</div>
+</div>
+</a>
+</li>
+</ul>
+</div>
+<div class="tab-pane vivify fadeIn delay-100" id="Chat-groups">
+<ul class="right_chat list-unstyled mb-0">
+<li class="offline">
+<a href="javascript:void(0);">
+<div class="media">
+<div class="avtar-pic w35 bg-cyan"><span>DT</span></div>
+<div class="media-body">
+<span class="name">Designer Team</span>
+<span class="message">offline</span>
+<span class="badge badge-outline status"></span>
+</div>
+</div>
+</a>
+</li>
+<li class="online">
+<a href="javascript:void(0);">
+<div class="media">
+<div class="avtar-pic w35 bg-azura"><span>SG</span></div>
+<div class="media-body">
+<span class="name">Sale Groups</span>
+<span class="message">online</span>
+<span class="badge badge-outline status"></span>
+</div>
+</div>
+</a>
+</li>
+<li class="online">
+<a href="javascript:void(0);">
+<div class="media">
+<div class="avtar-pic w35 bg-orange"><span>NF</span></div>
+<div class="media-body">
+<span class="name">New Fresher</span>
+<span class="message">online</span>
+<span class="badge badge-outline status"></span>
+</div>
+</div>
+</a>
+</li>
+<li class="offline">
+<a href="javascript:void(0);">
+<div class="media">
+<div class="avtar-pic w35 bg-indigo"><span>PL</span></div>
+<div class="media-body">
+<span class="name">Project Lead</span>
+<span class="message">offline since May 12</span>
+<span class="badge badge-outline status"></span>
+</div>
+</div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div> <div id="left-sidebar" class="sidebar">
+<div class="navbar-brand">
+<a href="index-2.html"><img src="https://oculux.nsdbytes.com/laravel/public/assets/images/icon.svg" alt="Oculux Logo" class="img-fluid logo"><span>Oculux</span></a>
+<button type="button" class="btn-toggle-offcanvas btn btn-sm float-right"><i class="lnr lnr-menu fa fa-chevron-circle-left"></i></button>
+</div>
+<div class="sidebar-scroll">
+<div class="user-account">
+<div class="user_div">
+<img src="{% static 'ugs_app/assets/images/user.png" class="user-photo" alt="User Profile Picture">
+</div>
+<div class="dropdown">
+<span>Welcome,</span>
+<a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong>Louis Pierce</strong></a>
+<ul class="dropdown-menu dropdown-menu-right account vivify flipInY">
+<li><a href="https://oculux.nsdbytes.com/laravel/public/pages/profile"><i class="icon-user"></i>My Profile</a></li>
+<li><a href="https://oculux.nsdbytes.com/laravel/public/email/inbox"><i class="icon-envelope-open"></i>Messages</a></li>
+<li><a href="javascript:void(0);"><i class="icon-settings"></i>Settings</a></li>
+<li class="divider"></li>
+<li><a href="https://oculux.nsdbytes.com/laravel/public/authentication/login"><i class="icon-power"></i>Logout</a></li>
+</ul>
+</div>
+</div>
+<nav id="left-sidebar-nav" class="sidebar-nav">
+<ul id="main-menu" class="metismenu">
+<li class="header">Main</li>
+<li class="active open">
+<a href="#myPage" class="has-arrow"><i class="icon-home"></i><span>My Page</span></a>
+<ul>
+<li class="active"><a href="index.html">My Dashboard</a></li>
+<li class><a href="index4.html">Web Analytics</a></li>
+<li class><a href="index5.html">Event Monitoring</a></li>
+<li class><a href="index6.html">Finance Performance</a></li>
+<li class><a href="index7.html">Sales Monitoring</a></li>
+<li class><a href="index8.html">Hospital Management</a></li>
+<li class><a href="index9.html">Campaign Monitoring</a></li>
+<li class><a href="index10.html">University Analytics</a></li>
+</ul>
+</li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/dashboard/index2"><i class="icon-speedometer"></i><span>Dashboard</span></a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/dashboard/index3"><i class="icon-diamond"></i><span>Cryptocurrency</span></a></li>
+<li class="header">HR, Project & Job</li>
+<li class>
+<a href="#Project" class="has-arrow"><i class="icon-flag"></i><span>Project</span></a>
+<ul>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/projects/taskboard">Taskboard</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/projects/projectlist">Project list</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/projects/addproject">Add Project</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/projects/ticket">Ticket List</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/projects/ticketdetails">Ticket Details</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/projects/clients">Clients</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/projects/todo">Todo List</a></li>
+</ul>
+</li>
+<li class>
+<a href="#Project" class="has-arrow"><i class="icon-umbrella"></i><span>HRMS System</span></a>
+<ul>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/hr/hrdashboard">Hr Dashboard</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/hr/users">Users</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/hr/departments">Departments</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/hr/employee">Employee</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/hr/activities">Activities</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/hr/holidays">Holidays</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/hr/events">Events</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/hr/payroll">Payroll</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/hr/accounts">Accounts</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/hr/report">Report</a></li>
+</ul>
+</li>
+<li class>
+<a href="#JobPortal" class="has-arrow"><i class="icon-screen-tablet"></i><span>Job Portal</span></a>
+<ul>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/job/jobdashboard">Dashboard</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/job/positions">Positions</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/job/applicants">Applicants</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/job/resumes">Resumes</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/job/jobsettings">Job Settings</a></li>
+</ul>
+</li>
+<li class="header">App</li>
+<li class>
+<a href="#Contact" class="has-arrow"><i class="icon-book-open"></i><span>Contact</span></a>
+<ul>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/contact/contact">List View</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/contact/contact2">Grid View</a></li>
+</ul>
+</li>
+<li class>
+<a href="#Contact" class="has-arrow"><i class="icon-drawer"></i><span>Email</span></a>
+<ul>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/email/inbox">Inbox</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/email/compose">Compose</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/email/inboxdetail">Inbox Detail</a></li>
+</ul>
+</li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/messenger/chat"><i class="icon-bubbles"></i><span>Messenger</span></a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/app/calendar"><i class="icon-calendar"></i><span>Calendar</span></a></li>
+<li class="header">UI Elements</li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/cardlayout/cards"><i class="icon-folder"></i><span>Cards Layout</span></a></li>
+<li class>
+<a href="#uiIcons" class="has-arrow"><i class="icon-tag"></i><span>Icons</span></a>
+<ul>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/icon/fontawesome">FontAwesome</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/icon/iconsline">Simple Line</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/icon/themify">Themify Icon</a></li>
+</ul>
+</li>
+<li class>
+<a href="#uiComponents" class="has-arrow"><i class="icon-diamond"></i><span>Components</span></a>
+<ul>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/components/bootstrap">Bootstrap UI</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/components/typography">Typography</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/components/colors">Colors</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/components/buttons">Buttons</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/components/tabs">Tabs</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/components/progressbars">Progress Bars</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/components/modals">Modals</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/components/notifications">Notifications</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/components/dialogs">Dialogs</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/components/listgroup">List Group</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/components/mediaobject">Media Object</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/components/nestable">Nestable</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/components/rangesliders">Range Sliders</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/components/helperclass">Helper Classes</a></li>
+</ul>
+</li>
+<li class>
+<a href="#forms" class="has-arrow"><i class="icon-pencil"></i><span>Forms</span></a>
+<ul>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/forms/basic">Basic Elements</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/forms/advanced">Advanced Elements</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/forms/validation">Form Validation</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/forms/wizard">Form Wizard</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/forms/summernote">Summernote</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/forms/dragdropupload">Drag &amp; Drop Upload</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/forms/editors">CKEditor</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/forms/markdown">Markdown</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/forms/cropping">Image Cropping</a></li>
+</ul>
+</li>
+<li class>
+<a href="#Tables" class="has-arrow"><i class="icon-layers"></i><span>Tables</span></a>
+<ul>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/tables/normal">Normal Tables</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/tables/color">Tables Color</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/tables/datatable">Jquery Datatables</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/tables/editable">Editable Tables</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/tables/filter">Table Filter</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/tables/dragger">Table dragger</a></li>
+</ul>
+</li>
+<li class>
+<a href="#charts" class="has-arrow"><i class="icon-pie-chart"></i><span>Charts</span></a>
+<ul>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/charts/c3">C3 Charts</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/charts/chartjs">ChartJS</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/charts/morris">Morris Charts</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/charts/flot">Flot Charts</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/charts/sparkline">Sparkline Chart</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/charts/knob">Jquery Knob</a></li>
+</ul>
+</li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/maps/jvectormap"><i class="icon-map"></i><span>jVector Map</span></a></li>
+<li class="header">Extra</li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/extra/settings"><i class="icon-settings"></i><span>Settings</span></a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/widget/widgets"><i class="icon-puzzle"></i><span>Widgets</span></a></li>
+<li class>
+<a href="#Authentication" class="has-arrow"><i class="icon-lock"></i><span>Authentication</span></a>
+<ul>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/authentication/login">Login</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/authentication/login2">Login Version2</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/authentication/register">Register</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/authentication/forgotpassword">Forgot Password</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/authentication/page404">Page 404</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/authentication/maintenance">Maintenance</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/authentication/comingsoon">Coming Soon</a></li>
+</ul>
+</li>
+<li class>
+<a href="#Pages" class="has-arrow"><i class="icon-docs"></i><span>Pages</span></a>
+<ul>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/pages/blank">Blank Page</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/pages/profile">User Profile</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/pages/userlist">User List</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/pages/testimonials">Testimonials</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/pages/invoices">Invoices</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/pages/timeline">Timeline</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/pages/searchresults">Search Results</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/pages/gallery">Image Gallery</a></li>
+<li class><a href="https://oculux.nsdbytes.com/laravel/public/pages/pricing">Pricing</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<div id="main-content">
+<div class="container-fluid">
+<div class="block-header">
+<div class="row clearfix">
+<div class="col-md-6 col-sm-12">
+<h1>My Dashboard</h1>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="index.html"><i class="icon-home"></i></a></li>
+<li class="breadcrumb-item">My Page</li>
+<li class="breadcrumb-item active">My Dashboard</li>
+</ol>
+</nav>
+</div>
+<div class="col-md-6 col-sm-12 text-right hidden-xs">
+<div class="d-flex flex-row-reverse">
+<a href="https://themeforest.net/user/puffintheme/portfolio" class="btn btn-success ml-1 mr-1"><i class="icon-basket"></i> Buy Now</a>
+<a href="javascript:void(0);" class="btn btn-primary">Go</a>
+<select class="custom-select w100 mr-3">
+<option selected>USA</option>
+<option value="2">India</option>
+<option value="3">Australia</option>
+</select>
+<select class="custom-select w150 mr-3">
+<option value="2">Last 3 Days</option>
+<option selected>Last 7 Days</option>
+<option value="2">Last 15 Days</option>
+<option value="2">Last 1 Month</option>
+<option value="2">Last 1 Year</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+<div class="row clearfix">
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body ribbon">
+<div class="ribbon-box green">15</div>
+<a href="https://oculux.nsdbytes.com/laravel/public/email/inbox" class="my_sort_cut text-muted">
+<i class="icon-envelope"></i>
+<span>Inbox</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body">
+<a href="https://oculux.nsdbytes.com/laravel/public/pages/profile" class="my_sort_cut text-muted">
+<i class="icon-user"></i>
+<span>Profile</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body ribbon">
+<div class="ribbon-box orange">8</div>
+<a href="https://oculux.nsdbytes.com/laravel/public/extra/settings" class="my_sort_cut text-muted">
+<i class="icon-settings"></i>
+<span>Settings</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body">
+<a href="https://oculux.nsdbytes.com/laravel/public/dashboard/index3" class="my_sort_cut text-muted">
+<i class="icon-diamond"></i>
+<span>My Crypto</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body">
+<a href="https://oculux.nsdbytes.com/laravel/public/app/calendar" class="my_sort_cut text-muted">
+<i class="icon-calendar"></i>
+<span>Calendar</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body ribbon">
+<div class="ribbon-box indigo">10</div>
+<a href="https://oculux.nsdbytes.com/laravel/public/pages/invoices" class="my_sort_cut text-muted">
+<i class="icon-doc"></i>
+<span>Invoices</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row clearfix">
+<div class="col-lg-4 col-md-12">
+<div class="card">
+<div class="header">
+<h2>Users</h2>
+</div>
+<div class="body">
+<div class="row text-center">
+<div class="col-6 border-right pb-4 pt-4">
+<label class="mb-0">New Users</label>
+<h4 class="font-30 font-weight-bold text-col-blue">2,025</h4>
+</div>
+<div class="col-6 pb-4 pt-4">
+<label class="mb-0">Return Visitors</label>
+<h4 class="font-30 font-weight-bold text-col-blue">1,254</h4>
+</div>
+</div>
+</div>
+<div class="body">
+<div class="form-group">
+<label class="d-block">New Users <span class="float-right">77%</span></label>
+<div class="progress progress-xxs">
+<div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%;"></div>
+</div>
+</div>
+<div class="form-group">
+<label class="d-block">Return Visitors <span class="float-right">50%</span></label>
+<div class="progress progress-xxs">
+<div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div>
+</div>
+</div>
+<div class="form-group">
+<label class="d-block">Engagement <span class="float-right">23%</span></label>
+<div class="progress progress-xxs">
+<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="23" aria-valuemin="0" aria-valuemax="100" style="width: 23%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-8 col-md-12">
+<div class="card user_statistics">
+<div class="header">
+<h2>Earning Report</h2>
+</div>
+<div class="body">
+<div id="chart-bar" style="height: 302px"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row clearfix">
+<div class="col-lg-3 col-md-6">
+<div class="card">
+<div class="body">
+<div class="d-flex align-items-center">
+<div class="icon-in-bg bg-indigo text-white rounded-circle"><i class="fa fa-briefcase"></i></div>
+<div class="ml-4">
+<span>Total income</span>
+<h4 class="mb-0 font-weight-medium">$7,805</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="card">
+<div class="body">
+<div class="d-flex align-items-center">
+<div class="icon-in-bg bg-azura text-white rounded-circle"><i class="fa fa-credit-card"></i></div>
+<div class="ml-4">
+<span>New expense</span>
+<h4 class="mb-0 font-weight-medium">$3,651</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="card">
+<div class="body">
+<div class="d-flex align-items-center">
+<div class="icon-in-bg bg-orange text-white rounded-circle"><i class="fa fa-users"></i></div>
+<div class="ml-4">
+<span>Daily Visits</span>
+<h4 class="mb-0 font-weight-medium">5,805</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="card">
+<div class="body">
+<div class="d-flex align-items-center">
+<div class="icon-in-bg bg-pink text-white rounded-circle"><i class="fa fa-life-ring"></i></div>
+<div class="ml-4">
+<span>Bounce rate</span>
+<h4 class="mb-0 font-weight-medium">$13,651</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row clearfix">
+<div class="col-lg-8 col-md-12">
+<div class="table-responsive">
+<table class="table table-hover table-custom spacing5">
+<thead>
+<tr>
+<th style="width: 20px;">#</th>
+<th>Client</th>
+<th style="width: 50px;">Amount</th>
+<th style="width: 50px;">Status</th>
+<th style="width: 110px;">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<span>01</span>
+</td>
+<td>
+<div class="d-flex align-items-center">
+<div class="avtar-pic w35 bg-red" data-toggle="tooltip" data-placement="top" title="Avatar Name"><span>SS</span></div>
+<div class="ml-3">
+<a href="page-invoices-detail.html" title>South Shyanne</a>
+<p class="mb-0"><a href="https://oculux.nsdbytes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d6a5b9a3a2bef8a5beafb7b8b8b396b3aeb7bba6bab3f8b5b9bb">[email&#160;protected]</a></p>
+</div>
+</div>
+</td>
+<td>$1200</td>
+<td><span class="badge badge-success ml-0 mr-0">Done</span></td>
+<td>
+<button type="button" class="btn btn-sm btn-default" title="Send Invoice" data-toggle="tooltip" data-placement="top"><i class="icon-envelope"></i></button>
+<button type="button" class="btn btn-sm btn-default " title="Print" data-toggle="tooltip" data-placement="top"><i class="icon-printer"></i></button>
+<button type="button" class="btn btn-sm btn-default" title="Delete" data-toggle="tooltip" data-placement="top"><i class="icon-trash"></i></button>
+</td>
+</tr>
+<tr>
+<td>
+<span>02</span>
+</td>
+<td>
+<div class="d-flex align-items-center">
+<img src="{% static 'ugs_app/assets/images/xs/avatar2.jpg" data-toggle="tooltip" data-placement="top" title="Avatar Name" alt="Avatar" class="w35 h35 rounded">
+<div class="ml-3">
+<a href="javascript:void(0);" title>Zoe Baker</a>
+<p class="mb-0"><a href="https://oculux.nsdbytes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dda7b2b8f3bfbcb6b8af9db8a5bcb0adb1b8f3beb2b0">[email&#160;protected]</a></p>
+</div>
+</div>
+</td>
+<td>$378</td>
+<td><span class="badge badge-success ml-0 mr-0">Done</span></td>
+<td>
+<button type="button" class="btn btn-sm btn-default" title="Send Invoice" data-toggle="tooltip" data-placement="top"><i class="icon-envelope"></i></button>
+<button type="button" class="btn btn-sm btn-default " title="Print" data-toggle="tooltip" data-placement="top"><i class="icon-printer"></i></button>
+<button type="button" class="btn btn-sm btn-default" title="Delete" data-toggle="tooltip" data-placement="top"><i class="icon-trash"></i></button>
+</td>
+</tr>
+<tr>
+<td>
+<span>03</span>
+</td>
+<td>
+<div class="d-flex align-items-center">
+<div class="avtar-pic w35 bg-indigo" data-toggle="tooltip" data-placement="top" title="Avatar Name"><span>CB</span></div>
+<div class="ml-3">
+<a href="javascript:void(0);" title>Colin Brown</a>
+<p class="mb-0"><a href="https://oculux.nsdbytes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d0b3bfbcb9beb2a2bfa7be90b5a8b1bda0bcb5feb3bfbd">[email&#160;protected]</a></p>
+</div>
+</div>
+</td>
+<td>$653</td>
+<td><span class="badge badge-success ml-0 mr-0">Done</span></td>
+<td>
+<button type="button" class="btn btn-sm btn-default" title="Send Invoice" data-toggle="tooltip" data-placement="top"><i class="icon-envelope"></i></button>
+<button type="button" class="btn btn-sm btn-default " title="Print" data-toggle="tooltip" data-placement="top"><i class="icon-printer"></i></button>
+<button type="button" class="btn btn-sm btn-default" title="Delete" data-toggle="tooltip" data-placement="top"><i class="icon-trash"></i></button>
+</td>
+</tr>
+<tr>
+<td>
+<span>04</span>
+</td>
+<td>
+<div class="d-flex align-items-center">
+<div class="avtar-pic w35 bg-green" data-toggle="tooltip" data-placement="top" title="Avatar Name"><span>KG</span></div>
+<div class="ml-3">
+<a href="javascript:void(0);" title>Kevin Gill</a>
+<p class="mb-0"><a href="https://oculux.nsdbytes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="563d33203f3878313f3a3a16332e373b263a337835393b">[email&#160;protected]</a></p>
+</div>
+</div>
+</td>
+<td>$451</td>
+<td><span class="badge badge-warning  ml-0 mr-0">Panding</span></td>
+<td>
+<button type="button" class="btn btn-sm btn-default" title="Send Invoice" data-toggle="tooltip" data-placement="top"><i class="icon-envelope"></i></button>
+<button type="button" class="btn btn-sm btn-default " title="Print" data-toggle="tooltip" data-placement="top"><i class="icon-printer"></i></button>
+<button type="button" class="btn btn-sm btn-default" title="Delete" data-toggle="tooltip" data-placement="top"><i class="icon-trash"></i></button>
+</td>
+</tr>
+<tr>
+<td>
+<span>05</span>
+</td>
+<td>
+<div class="d-flex align-items-center">
+<img src="{% static 'ugs_app/assets/images/xs/avatar5.jpg" data-toggle="tooltip" data-placement="top" title="Avatar Name" alt="Avatar" class="w35 h35 rounded">
+<div class="ml-3">
+<a href="javascript:void(0);" title>Brandon Smith</a>
+<p class="mb-0"><a href="https://oculux.nsdbytes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="bbf6dac9d2da95dcd2d7d7fbdec3dad6cbd7de95d8d4d6">[email&#160;protected]</a></p>
+</div>
+</div>
+</td>
+<td>$1,989</td>
+<td><span class="badge badge-success  ml-0 mr-0">Done</span></td>
+<td>
+<button type="button" class="btn btn-sm btn-default" title="Send Invoice" data-toggle="tooltip" data-placement="top"><i class="icon-envelope"></i></button>
+<button type="button" class="btn btn-sm btn-default " title="Print" data-toggle="tooltip" data-placement="top"><i class="icon-printer"></i></button>
+<button type="button" class="btn btn-sm btn-default" title="Delete" data-toggle="tooltip" data-placement="top"><i class="icon-trash"></i></button>
+</td>
+</tr>
+<tr>
+<td>
+<span>06</span>
+</td>
+<td>
+<div class="d-flex align-items-center">
+<img src="{% static 'ugs_app/assets/images/xs/avatar6.jpg" data-toggle="tooltip" data-placement="top" title="Avatar Name" alt="Avatar" class="w35 h35 rounded">
+<div class="ml-3">
+<a href="javascript:void(0);" title>Kevin Baker</a>
+<p class="mb-0"><a href="https://oculux.nsdbytes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c0aba5b6a9aeeea2a1aba5b280a5b8a1adb0aca5eea3afad">[email&#160;protected]</a></p>
+</div>
+</div>
+</td>
+<td>$343</td>
+<td><span class="badge badge-warning  ml-0 mr-0">Panding</span></td>
+<td>
+<button type="button" class="btn btn-sm btn-default" title="Send Invoice" data-toggle="tooltip" data-placement="top"><i class="icon-envelope"></i></button>
+<button type="button" class="btn btn-sm btn-default " title="Print" data-toggle="tooltip" data-placement="top"><i class="icon-printer"></i></button>
+<button type="button" class="btn btn-sm btn-default" title="Delete" data-toggle="tooltip" data-placement="top"><i class="icon-trash"></i></button>
+</td>
+</tr>
+<tr>
+<td>
+<span>07</span>
+</td>
+<td>
+<div class="d-flex align-items-center">
+<img src="{% static 'ugs_app/assets/images/xs/avatar2.jpg" data-toggle="tooltip" data-placement="top" title="Avatar Name" alt="Avatar" class="w35 h35 rounded">
+<div class="ml-3">
+<a href="javascript:void(0);" title>Zoe Baker</a>
+<p class="mb-0"><a href="https://oculux.nsdbytes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="cdb7a2a8e3afaca6a8bf8da8b5aca0bda1a8e3aea2a0">[email&#160;protected]</a></p>
+</div>
+</div>
+</td>
+<td>$378</td>
+<td><span class="badge badge-success ml-0 mr-0">Done</span></td>
+<td>
+<button type="button" class="btn btn-sm btn-default" title="Send Invoice" data-toggle="tooltip" data-placement="top"><i class="icon-envelope"></i></button>
+<button type="button" class="btn btn-sm btn-default " title="Print" data-toggle="tooltip" data-placement="top"><i class="icon-printer"></i></button>
+<button type="button" class="btn btn-sm btn-default" title="Delete" data-toggle="tooltip" data-placement="top"><i class="icon-trash"></i></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="col-lg-4 col-md-12">
+<a class="card" href="javascript:void(0)">
+<div class="body text-center">
+<img class="img-thumbnail rounded-circle" src="{% static 'ugs_app/assets/images/sm/avatar1.jpg" alt>
+<h6 class="mt-3">Michelle Green</h6>
+<div class="text-center text-muted">Intranet Developer</div>
+</div>
+<div class="card-footer text-center">
+<div class="row clearfix">
+<div class="col-6">
+<i class="fa fa-tag font-22"></i>
+<div><span class="text-muted">9 Badges</span></div>
+</div>
+<div class="col-6">
+<i class="fa fa-dollar font-22"></i>
+<div><span class="text-muted">$ 3.100</span></div>
+</div>
+</div>
+</div>
+</a>
+<div class="card">
+<div class="body">
+<div class="card-text">
+<div class="mt-0">
+<small class="float-right text-muted">10/200 GB</small>
+<span>Memory</span>
+<div class="progress progress-xxs">
+<div style="width: 60%;" class="progress-bar"></div>
+</div>
+</div>
+<div class="mt-4">
+<small class="float-right text-muted">40 MB</small>
+<span>Bandwidth</span>
+<div class="progress progress-xxs">
+<div style="width: 50%;" class="progress-bar"></div>
+</div>
+</div>
+<div class="mt-4">
+<small class="float-right text-muted">73%</small>
+<span>Activity</span>
+<div class="progress progress-xxs">
+<div style="width: 40%;" class="progress-bar"></div>
+</div>
+</div>
+<div class="mt-4">
+<small class="float-right text-muted">400 GB</small>
+<span>FTP</span>
+<div class="progress progress-xxs mb-0">
+<div style="width: 80%;" class="progress-bar bg-danger"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js'%}" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/fontawesome.min.js'%}" integrity="sha512-C8qHv0HOaf4yoA7ISuuCTrsPX8qjolYTZyoFRKNA9dFKnxgzIHnYTOJhXQIt6zwpIFzCrRzUBuVgtC4e5K1nhA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script data-cfasync="false" src="{% static 'ugs_app/assets/email-decode.min.js'%}"></script> -->
+<script src="{% static 'ugs_app/assets/bundles/libscripts.bundle.js'%}" type="text/javascript"></script>
+<script src="{% static 'ugs_app/assets/bundles/vendorscripts.bundle.js'%}" type="text/javascript"></script>
+<script src="{% static 'ugs_app/assets/bundles/c3.bundle.js'%}" type="text/javascript"></script>
+<script src="{% static 'ugs_app/assets/bundles/mainscripts.bundle.js'%}" type="text/javascript"></script>
+<script src="{% static 'ugs_app/assets/js/index.js'%}" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+
+<!-- Mirrored from oculux.nsdbytes.com/laravel/public/mypage/index by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Mar 2024 14:56:19 GMT -->
+</html>
