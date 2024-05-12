@@ -609,11 +609,12 @@ Anyone posts a comment on my post
     console.log(socket)
     socket.onmessage =function(e){
         console.log(e.data)
+        
     }
 
     socket.onopen = function(e){
         socket.send(JSON.stringify({
-            'message': 'Hello from Client',
+            'message': 'Hello from Betting Page',
         }))
     }
     
