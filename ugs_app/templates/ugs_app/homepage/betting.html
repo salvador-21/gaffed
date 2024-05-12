@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+{% load static%}
+<html lang="en">
+{% include '../includes/header.html'%}
+<style type="text/css">
+    @media (max-width : 770px) {
+
+    }
+
+ 
+   @media (max-width : 320px) {
+    .vid_dis{
+        height: auto;
+    }
+   }
+.regla_tb td{
+    border: 1px solid gray;
+    padding: 2px;
+}
+ </style>
+<body class="theme-orange font-montserrat">
+
+<div class="page-loader-wrapper">
+<div class="loader">
+<div class="bar1"></div>
+<div class="bar2"></div>
+<div class="bar3"></div>
+<div class="bar4"></div>
+<div class="bar5"></div>
+</div>
+</div>
+
+<div class="overlay"></div>
+<div id="wrapper">
+{% include '../includes/top_nav.html'%}
+
+<div id="megamenu" class="megamenu particles_jsa">
+<a href="javascript:void(0);" class="megamenu_toggle btn btn-danger"><i class="icon-close"></i></a>
+<div class="container">
+<div class="row clearfix">
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body ribbon">
+<div class="ribbon-box green">15</div>
+<a href="https://oculux.nsdbytes.com/laravel/public/email/inbox" class="my_sort_cut text-muted">
+<i class="icon-envelope"></i>
+<span>Inbox</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body">
+<a href="https://oculux.nsdbytes.com/laravel/public/pages/profile" class="my_sort_cut text-muted">
+<i class="icon-user"></i>
+<span>Profile</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body ribbon">
+<div class="ribbon-box orange">8</div>
+<a href="https://oculux.nsdbytes.com/laravel/public/extra/settings" class="my_sort_cut text-muted">
+<i class="icon-settings"></i>
+<span>Settings</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body">
+<a href="https://oculux.nsdbytes.com/laravel/public/dashboard/index3" class="my_sort_cut text-muted">
+<i class="icon-diamond"></i>
+<span>My Crypto</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body">
+<a href="https://oculux.nsdbytes.com/laravel/public/app/calendar" class="my_sort_cut text-muted">
+<i class="icon-calendar"></i>
+<span>Calendar</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 col-md-4 col-xl-2">
+<div class="card">
+<div class="body ribbon">
+<div class="ribbon-box indigo">10</div>
+<a href="https://oculux.nsdbytes.com/laravel/public/pages/invoices" class="my_sort_cut text-muted">
+<i class="icon-doc"></i>
+<span>Invoices</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row clearfix">
+<div class="col-md-4 col-sm-12">
+<div class="card w_card3">
+<div class="body">
+<div class="text-center"><i class="icon-picture text-info"></i>
+<h4 class="m-t-25 mb-0">104 Picture</h4>
+<p>Your gallery download complete</p>
+<a href="javascript:void(0);" class="btn btn-info btn-round">Download now</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-12">
+<div class="card w_card3">
+<div class="body">
+<div class="text-center"><i class="icon-diamond text-success"></i>
+<h4 class="m-t-25 mb-0">813 Point</h4>
+<p>You are doing great job!</p>
+<a href="javascript:void(0);" class="btn btn-success btn-round">Read now</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4 col-sm-12">
+<div class="card w_card3">
+<div class="body">
+<div class="text-center"><i class="icon-social-twitter text-primary"></i>
+<h4 class="m-t-25 mb-0">3,756</h4>
+<p>New Followers on Twitter</p>
+<a href="javascript:void(0);" class="btn btn-primary btn-round">Find more</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-12">
+<ul class="list-group">
+<li class="list-group-item">
+Anyone send me a message
+<div class="float-right">
+<label class="switch">
+<input type="checkbox" checked>
+<span class="slider round"></span>
+</label>
+</div>
+</li>
+<li class="list-group-item">
+Anyone seeing my profile page
+<div class="float-right">
+<label class="switch">
+<input type="checkbox" checked>
+<span class="slider round"></span>
+</label>
+</div>
+</li>
+<li class="list-group-item">
+Anyone posts a comment on my post
+<div class="float-right">
+<label class="switch">
+<input type="checkbox">
+<span class="slider round"></span>
+</label>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="particles-js"></div>
+</div> <div class="search_div">
+<div class="card">
+<div class="body">
+<form id="navbar-search" class="navbar-form search-form">
+<div class="input-group mb-0">
+<input type="text" class="form-control" placeholder="Search...">
+<div class="input-group-append">
+<span class="input-group-text"><i class="icon-magnifier"></i></span>
+<a href="javascript:void(0);" class="search_toggle btn btn-danger"><i class="icon-close"></i></a>
+</div>
+</div>
+</form>
+</div>
+</div>
+<span>Search Result <small class="float-right text-muted">About 90 results (0.47 seconds)</small></span>
+<div class="table-responsive">
+
+
+</div>
+</div> 
+
+
+{%  include '../includes/right_side_nav.html'%}
+
+</div> 
+<!-- sidebar -->
+{% include '../includes/side_nav.html'%}
+<div id="main-content">
+<div class="container-fluid">
+<!-- Main Content -->
+
+<!-- ////////////////////////////// -->
+<div class="row clearfix">
+<div class="col-lg-8 col-md-12">
+    <a class="card" href="javascript:void(0)">  
+        <div class="card-footer ">
+            <div class="row">
+                <div class="col-md-6 text-left">
+                    <span class="text-warning fw-bolder" >6 COCK BULLSTAG UBUSAN NG BALA BIG EVENT DERBY SET-A</span>
+                </div>
+                <div class="col-md-6 text-right">
+                    <span class="text-white fw-bolder" >April 5, 2024</span>
+                </div>
+            </div>
+        </div>
+        <div class="body text-center vid_dis">
+            <iframe style="height:50vh;width:100%;border:none;overflow:hidden;" src="https://www.youtube.com/embed/Ky34GD5rczw?si=56I6j7uz_nO-rezm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <!-- <iframe style="height:50vh;width:100%;border:none;overflow:hidden;" src="https://www.youtube.com/embed/r_hwELpYCVA?si=RfW3Z1hmlIf1H6g4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+        </div>  
+        <div class="card-footer text-center">
+        <img class="" style="width: 100px;height: 100px;position: relative;margin-top: -100px;" src="{% static 'ugs_app/assets/logo2.png'%}">
+        </div>
+        </a> 
+</div> 
+
+<div class="col-lg-4 col-md-12">
+
+<a class="card" href="javascript:void(0)">
+<div class="body text-center pt-0">
+    <div class="row clearfix">
+        <div class="col-6">
+            <span>STATUS</span>
+        </div>
+        <div class="col-6">
+            <span>FIGHT #</span>
+        </div>
+
+        <div class="col-6 p-0">
+        <div class="col-12 bg-azura">WALA</div>
+       
+        <h4 class="font-30 font-weight-bold text-col-blue mt-4">&#8369; 2,025</h4>
+<div class="text-center text-muted">Wala: Total Bet</div>
+        </div>
+        <div class="col-6 p-0">
+            <div class="col-12 bg-danger">MERON</div>
+         <h4 class="font-30 font-weight-bold text-col-blue mt-4">&#8369; <span id="meron_cc">0</span></h4>
+<div class="text-center text-muted">Meron: Total Bet</div>
+  </div>
+</div>
+
+</div>
+<div class="card-footer text-center">
+
+<div class="row clearfix">
+    <div class="d-flex flex-row-reverse col-12">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <button class="btn btn-warning fw-bolder addaccount" type="button">&#8369;</button>
+            </div>
+            <input type="number" class="form-control"  id="my_bet" value="0"  placeholder="Your Bet Here" aria-label="" aria-describedby="basic-addon1">
+        </div>
+    </div>
+    <div class="col-12 mb-2 text-left">
+        <button class="btn btn-xs  bet btn-warning m-0 mb-2" value="100">+100</button>
+        <button class="btn btn-xs  bet btn-warning m-0 mb-2" value="200">+200</button>
+        <button class="btn btn-xs  bet btn-warning m-0 mb-2" value="300">+300</button>
+        <button class="btn btn-xs  bet btn-warning m-0 mb-2" value="500">+500</button>
+        <button class="btn btn-xs bet btn-warning m-0 mb-2" value="1000">+1000 </button>
+    </div>
+<div class="col-6 p-0">
+<button class="btn btn-block bg-azura " style="height: 50px;font-size: 20px;font-weight: bolder;">WALA</button>
+</div>
+<div class="col-6 p-0">
+    <button class="btn btn-block btn-danger w-100 " style="height: 50px;font-size: 20px;font-weight: bolder;">MERON</button>
+</div>
+</div>
+<div class="row clearfix mt-2">
+    <div class="col-6 p-0">
+    <button class="btn btn-block bg-green " style="height: 50px;font-size: 20px;font-weight: bolder;">DRAW</button>
+    </div>
+    <div class="col-6 p-0">
+        <button class="btn btn-block bg-info w-100 " style="height: 50px;font-size: 20px;font-weight: bolder;">LONGEST</button>
+    </div>
+</div>
+
+</div>
+</a>
+<div class="card">
+<div class="body">
+<div class="card-text">
+<div class="mt-0">
+<small class="float-right text-muted">10/200 GB</small>
+<span>Memory</span>
+<div class="progress progress-xxs">
+<div style="width: 60%;" class="progress-bar"></div>
+</div>
+</div>
+<div class="mt-4">
+<small class="float-right text-muted">40 MB</small>
+<span>Bandwidth</span>
+<div class="progress progress-xxs">
+<div style="width: 50%;" class="progress-bar"></div>
+</div>
+</div>
+<div class="mt-4">
+<small class="float-right text-muted">73%</small>
+<span>Activity</span>
+<div class="progress progress-xxs">
+<div style="width: 40%;" class="progress-bar"></div>
+</div>
+</div>
+<div class="mt-4">
+<small class="float-right text-muted">400 GB</small>
+<span>FTP</span>
+<div class="progress progress-xxs mb-0">
+<div style="width: 80%;" class="progress-bar bg-danger"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-lg-12 col-md-12">
+    <a class="card" href="javascript:void(0)">  
+        <div class="card-footer ">
+            <div class="row">
+                <div class="col-md-6 text-left">
+                    <span class="text-warning fw-bolder" >REGLA</span>
+                </div>
+                <div class="col-md-6 text-right">
+                    <span class="text-white fw-bolder" >April 5, 2024</span>
+                </div>
+            </div>
+        </div>
+        <div class="body text-center vid_dis">
+         <table class="table table-responsive regla_tb" >
+            <tr>
+                <td><div class="bg-danger text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">M</span></div> </td>
+                <td><div class="bg-blue text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">W</span></div> </td>
+                <td><div class="bg-green text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">D</span></div> </td>
+                <td><div class="bg-info text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">L</span></div> </td>
+                <td><div class="bg-danger text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">M</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+            </tr>
+            <tr>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+            </tr>
+            <tr>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+            </tr>
+            <tr>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+                <td><div class="bg-secondary text-center" style="width: 30px; height: 30px; border-radius: 50%;padding-top: 3px;font-size: 16px;"><span class="text-white">?</span></div> </td>
+            </tr>
+            
+         </table>
+        </div>  
+        <div class="card-footer text-center">
+        </div>
+        </a> 
+</div> 
+
+</div>
+</div>
+
+
+{% include '../includes/footer_script.html'%}
+
+<script>
+    $(document).on('click','.bet',function(){
+        bet=$(this).val()
+        cbet=$('#my_bet').val()
+        if(cbet == 0){
+            tbet=bet
+            $('#my_bet').val(bet)
+        }else{
+            tbet=parseInt(bet) + parseInt(cbet)
+            $('#my_bet').val(tbet)
+        }
+       
+        console.log(tbet)
+    })
+
+    var socket= new WebSocket('ws://'+window.location.host+'/ws/betting/');
+    console.log(socket)
+    socket.onmessage =function(e){
+        console.log(e.data)
+    }
+
+    socket.onopen = function(e){
+        socket.send(JSON.stringify({
+            'message': 'Hello from Client',
+        }))
+    }
+    
+</script>
+</body>
+
+</html>

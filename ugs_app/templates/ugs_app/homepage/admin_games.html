@@ -12,7 +12,7 @@
 <div class="bar5"></div>
 </div>
 </div>
-<div class="overlay"></div>
+<div class="overlay" ></div>
 <div id="wrapper">
 {% include '../includes/top_nav.html'%}
 
@@ -37,17 +37,18 @@
         </div>
     
     </div>
+    <!-- <div id="particles-js"></div> -->
     <div class="card-footer text-center">
-    <div class="row clearfix">
+    <div class="row clearfix"  >
     <div class="col-12">
         <form id="game_frm" method="POST" enctype="multipart/form-data">
-            <div class="dropify-wrapper has-preview"><div class="dropify-message"><span class="file-icon"></span> <p>Drag and drop a file here or click</p><p class="dropify-error">Ooops, something wrong happended.</p></div><div class="dropify-loader" style="display: none;"></div><div class="dropify-errors-container"><ul></ul></div><input type="file" id="dropify-event" data-default-file="../assets/images/image-gallery/1.jpg"><button type="button" class="btn btn-sm btn-primary btn-round dropify-clear">Remove</button><div class="dropify-preview" style="display: block;"><span class="dropify-render"><img src="../assets/images/image-gallery/1.jpg"></span><div class="dropify-infos"><div class="dropify-infos-inner"><p class="dropify-filename"><span class="dropify-filename-inner">1.jpg</span></p><p class="dropify-infos-message">Drag and drop or click to replace</p></div></div></div></div>
+         
         <div class="input-group mb-3">
             <div class="input-group-prepend">
             <span class="input-group-text">Image</span>
             </div>
             <div class="custom-file">
-            <input type="file" name="game_img" class="custom-file-input form-control" id="game_img" onchange="getImagePreview(event)">
+            <input type="file" name="g_image" class="custom-file-input form-control" id="game_img" >
             <label class="custom-file-label" for="game_img">Choose file</label>
             </div>
         </div>
@@ -55,13 +56,13 @@
             <div class="input-group-prepend">
             <span class="input-group-text">Title</span>
             </div>
-            <input type="text" name="title" placeholder="Username" class="form-control " maxlength="50" required="" id="title">
+            <input type="text" name="g_name" placeholder="Game Title" class="form-control "  required="" id="gname">
         </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
             <span class="input-group-text">Category</span>
             </div>
-            <select name="category"  class="form-control bg-dark" required="" id="category">
+            <select name="g_category"  class="form-control bg-dark" required="" id="category">
                 <option value="" selected="">-------</option>
                 <option value="E-SABONG">E-SABONG</option>
                 <option value="BALL GAMES">BALL GAMES</option>
@@ -72,9 +73,19 @@
             <div class="input-group-prepend">
             <span class="input-group-text">Description</span>
             </div>
-           <textarea class="form-control" name="desc"></textarea>
+           <textarea class="form-control" name="g_desc"></textarea>
         </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+            <span class="input-group-text">Game Link</span>
+            </div>
+            <input type="text" name="g_link" placeholder="https:\\" class="form-control " required id="glink">
+        </div>
+          <!-- {{game_frm}} -->
+
         <button class="btn btn-warning btn-block" form="game_frm"  type="submit">Submit</button>
+
+      
     </form>
     </div>
     </div>
@@ -97,20 +108,23 @@
     </tr>
     </thead>
     <tbody>
+
+        {% for g in games%}
+
     <tr>
     <td>
     <span>01</span>
     </td>
     <td>
     <div class="d-flex align-items-center">
-    <div class="avtar-pic w35 bg-red" data-toggle="tooltip" data-placement="top" title="Avatar Name"><span>SS</span></div>
+    <div class="avtar-pic w35 bg-red" data-toggle="tooltip" data-placement="top" title="Avatar Name"><img class="w-100" src="/{{g.g_image}}"></div>
     <div class="ml-3">
-    <a href="page-invoices-detail.html" title>South Shyanne</a>
+    <a href="page-invoices-detail.html" title>{{g.g_name}}</a>
     <p class="mb-0"><a href="https://oculux.nsdbytes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d6a5b9a3a2bef8a5beafb7b8b8b396b3aeb7bba6bab3f8b5b9bb">[email&#160;protected]</a></p>
     </div>
     </div>
     </td>
-    <td>$1200</td>
+    <td>{{g.g_image}}</td>
     <td><span class="badge badge-success ml-0 mr-0">Done</span></td>
     <td>
     <button type="button" class="btn btn-sm btn-default" title="Send Invoice" data-toggle="tooltip" data-placement="top"><i class="icon-envelope"></i></button>
@@ -118,59 +132,22 @@
     <button type="button" class="btn btn-sm btn-default" title="Delete" data-toggle="tooltip" data-placement="top"><i class="icon-trash"></i></button>
     </td>
     </tr>
-    <tr>
-    <td>
-    <span>02</span>
-    </td>
-    <td>
-    <div class="d-flex align-items-center">
-    <img src="{% static 'ugs_app/assets/user.png'%}" data-toggle="tooltip" data-placement="top" title="Avatar Name" alt="Avatar" class="w35 h35 rounded">
-    <div class="ml-3">
-    <a href="javascript:void(0);" title>Zoe Baker</a>
-    <p class="mb-0"><a href="https://oculux.nsdbytes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="dda7b2b8f3bfbcb6b8af9db8a5bcb0adb1b8f3beb2b0">[email&#160;protected]</a></p>
-    </div>
-    </div>
-    </td>
-    <td>$378</td>
-    <td><span class="badge badge-success ml-0 mr-0">Done</span></td>
-    <td>
-    <button type="button" class="btn btn-sm btn-default" title="Send Invoice" data-toggle="tooltip" data-placement="top"><i class="icon-envelope"></i></button>
-    <button type="button" class="btn btn-sm btn-default " title="Print" data-toggle="tooltip" data-placement="top"><i class="icon-printer"></i></button>
-    <button type="button" class="btn btn-sm btn-default" title="Delete" data-toggle="tooltip" data-placement="top"><i class="icon-trash"></i></button>
-    </td>
-    </tr>
-    <tr>
-    <td>
-    <span>03</span>
-    </td>
-    <td>
-    <div class="d-flex align-items-center">
-    <div class="avtar-pic w35 bg-indigo" data-toggle="tooltip" data-placement="top" title="Avatar Name"><span>CB</span></div>
-    <div class="ml-3">
-    <a href="javascript:void(0);" title>Colin Brown</a>
-    <p class="mb-0"><a href="https://oculux.nsdbytes.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d0b3bfbcb9beb2a2bfa7be90b5a8b1bda0bcb5feb3bfbd">[email&#160;protected]</a></p>
-    </div>
-    </div>
-    </td>
-    <td>$653</td>
-    <td><span class="badge badge-success ml-0 mr-0">Done</span></td>
-    <td>
-    <button type="button" class="btn btn-sm btn-default" title="Send Invoice" data-toggle="tooltip" data-placement="top"><i class="icon-envelope"></i></button>
-    <button type="button" class="btn btn-sm btn-default " title="Print" data-toggle="tooltip" data-placement="top"><i class="icon-printer"></i></button>
-    <button type="button" class="btn btn-sm btn-default" title="Delete" data-toggle="tooltip" data-placement="top"><i class="icon-trash"></i></button>
-    </td>
-    </tr>
+   {% endfor%}
    
     </tbody>
     </table>
     </div>
+    
     </div> 
 
     <!-- end table -->
 
 </div>
+
 </div>
+
 </div>
+
 </div>
    
     
@@ -181,23 +158,13 @@
 </div>
 </div>
 </div>
+
 </div>
 
 
 {% include '../modals/admin_modal.html'%}
 {% include '../includes/footer_script.html'%}
-<script>
-    function getImagePreview(event)
-{
-  var image=URL.createObjectURL(event.target.files[0]);
-  var imagediv= document.getElementById('preview');
-  var newimg=document.createElement('img');
-  imagediv.innerHTML='';
-  newimg.src=image;
-  newimg.width="300";
-  imagediv.append(newimg);
-}
-</script>
+
 
 </body>
 

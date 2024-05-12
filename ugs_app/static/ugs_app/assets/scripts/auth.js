@@ -9,9 +9,8 @@ $('#auth').on('submit',function(e){
     <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>\
     <i class="fa fa-times-circle"></i> Invalid Credentials!</div>'
    
-
     data=$(this).serializeArray()
-
+    
     $.ajax({
         method:'POST',
         url:'auth_user',

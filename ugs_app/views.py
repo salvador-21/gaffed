@@ -77,7 +77,7 @@ def user_account(request):
      getuser=UserAccount.objects.all().select_related('user')
      getwallet=UserWallet.objects.all().select_related('user')
      context={
-          'page':'User Account',
+          'page':'Accounts',
           'users':getuser,
           'wallet':getwallet,
           'wallet_frm':WalletForm(),
@@ -98,9 +98,9 @@ def adminAccReg(request):
     walletform=WalletForm()
     if request.method=='POST':
        account = SignUpForm(data=request.POST)
-       userinfo = UserForm(data = request.POST)
+       userinfo = UserForm(data=request.POST)
      #   wallet=WalletForm(data=request.POST)
-      
+       print(request.POST.get('contact_no'))
        if account.is_valid() and userinfo.is_valid() :
             user = account.save()
             user.set_password(user.password)
@@ -160,11 +160,24 @@ def getuser(request):
 
 def admin_games(request):
     page='Games'
-    return render(request,'ugs_app/homepage/admin_games.html',{'title':'Homepage','page':page})
+    games=Games.objects.all()
+    return render(request,'ugs_app/homepage/admin_games.html',{'title':'Homepage','page':page,'game_frm':GameForm(),'games':list(games)})
 
 @csrf_exempt
 def add_games(request):
-     for filename, file in request.FILES.items():
-      print(filename, file)
-      data=file
+     if request.method =='POST':
+          gform=GameForm(request.POST, request.FILES)
+          if gform.is_valid():
+               games = gform.save(commit=False)
+               games.g_by=request.user.id
+               games.save()
+               data='ok'
+          else:
+               data='bad'
+               print('bad')
      return JsonResponse({'data':str(data)})
+
+
+def betting(request):
+
+     return render(request,'ugs_app/homepage/betting.html',{'title':'Betting','page':'betting'})

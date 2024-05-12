@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import environ
 from pathlib import Path
+import os
 env=environ.Env(
     DEBUG=(bool,False)
 )
@@ -36,7 +37,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
-    'ugs_app.apps.UgsAppConfig',
+    'channels',
     'rest_framework',
     'corsheaders',
     'django.contrib.admin',
@@ -45,10 +46,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    'ugs_app.apps.UgsAppConfig',
 ]
 
 MIDDLEWARE = [
- 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
@@ -77,7 +79,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ugs_proj.wsgi.application'
+# WSGI_APPLICATION = 'ugs_proj.wsgi.application'
+ASGI_APPLICATION = 'ugs_proj.asgi.application'
 
 
 # Database
@@ -92,7 +95,7 @@ WSGI_APPLICATION = 'ugs_proj.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ugs',
+        'NAME': 'ugs_db',
         'USER': 'root',
         'PASSWORD': 'GGisreal-2024',
         'HOST':'localhost',
@@ -135,8 +138,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+MEDIA_ROOT=  '/media/'
 
+
+MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
+
+STATICFILES_DIRS=(
+    os.path.join(BASE_DIR, 'ugs_app/static'),
+)
 # REST_FRAMEWORK={
 #     'DEFAULT_PAGINATION_CLASS':'rest.framework.pagination.LimitOffsetPagination',
 #     'PAGE_SIZE':5,

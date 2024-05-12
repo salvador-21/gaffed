@@ -12,20 +12,19 @@
     <div class="modal-body ">
         <form id="account_reg">
             {% for i in signup_frm %}
+    
+            <label class="">{{i.label}}</label>
+        
             <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                <span class="input-group-text">{{i.label}}</span>
-                </div>
+              
                 {{i}}
                  <!-- <input type="text" class="form-control" name="username" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"> -->
             </div>
             {% endfor %}
             
             {% for u in user_frm%}
+            <label class="">{{u.label}}</label>
             <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                <span class="input-group-text">{{u.label}}</span>
-                </div>
                 {{u}}
         
             </div>

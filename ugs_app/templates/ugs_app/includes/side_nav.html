@@ -10,7 +10,8 @@
     <ul id="main-menu" class="metismenu">
     <li class="header">{{ user.useraccount.usertype}}</li>
     <li class="{% if page == 'Dashboard'%}active{%endif%}"><a href="{% url 'homepage'%}"><i class="icon-home"></i><span>Dashboard</span></a></li>
-    <li class="{% if page == 'User Account'%}active{%endif%}"><a href="{% url 'user_account'%}"><i class="icon-users"></i><span>User Account's</span></a></li>
+    <li class="{% if page == 'Accounts'%}active{%endif%}"><a href="{% url 'user_account'%}"><i class="icon-users"></i><span>User Account's</span></a></li>
+    <li class="{% if page == 'Games'%}active{%endif%}"><a href="{% url 'admin_games'%}"><i class="icon-game-controller"></i><span>Games</span></a></li>
     <li class>
     <a href="#Pages" class="has-arrow"><i class="icon-game-controller"></i><span>Online Games's</span></a>
     <ul>
